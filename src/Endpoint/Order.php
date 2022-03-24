@@ -54,6 +54,16 @@ class Order extends AbstractEndpoint
     }
     
     /**
+     * @param array $data = []
+     *
+     * @return array|null
+     */
+    public function update(array $data = []): ?array
+    {
+        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource()), $data);
+    }
+    
+    /**
      * @param int $id
      *
      * @return array|null
