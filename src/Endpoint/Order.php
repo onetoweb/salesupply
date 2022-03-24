@@ -33,6 +33,16 @@ class Order extends AbstractEndpoint
     }
     
     /**
+     * @param int $id
+     *
+     * @return array|null
+     */
+    public function get(int $id): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id));
+    }
+    
+    /**
      * @param int $shopId
      * @param array $data = []
      *

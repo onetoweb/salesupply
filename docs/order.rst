@@ -21,6 +21,13 @@ Get Orders
         'pageNumber' => 1
     ]);
 
+Get order
+
+.. code-block:: php
+    
+    $id = 42;
+    $orders = $client->order->get($id);
+
 Create order
 
 .. code-block:: php
