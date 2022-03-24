@@ -86,3 +86,10 @@ Create order
             'Phone' => 'sample string 8',
         ],
     ]);
+
+Delete order
+
+.. code-block:: php
+    
+    $id = 42;
+    $client->order->delete($id);
