@@ -28,14 +28,6 @@ Get order
     $id = 42;
     $orders = $client->order->get($id);
 
-
-Get order rows
-
-.. code-block:: php
-    
-    $id = 18618326;
-    $orderRows = $client->order->rows($id);
-
 Create order
 
 .. code-block:: php
@@ -56,16 +48,18 @@ Create order
                 'ItemQuantity' => 1,
                 'ProductName' => 'sample string 1',
                 'ProductCode' => 'sample string 2',
+                'ProductDescription' => 'sample string 3',
                 'ItemPriceExVat' => 100,
                 'ItemPriceIncVat' => 121,
                 'RowDiscountExVat' => 0,
                 'RowDiscountIncVat' => 0,
                 'Vatperc' => 21
             ], [
-                'Sequence' => 1,
+                'Sequence' => 2,
                 'ItemQuantity' => 2,
                 'ProductName' => 'sample string 1',
                 'ProductCode' => 'sample string 2',
+                'ProductDescription' => 'sample string 3',
                 'ItemPriceExVat' => 100,
                 'ItemPriceIncVat' => 121,
                 'RowDiscountExVat' => 0,
@@ -126,16 +120,18 @@ Update order
                 'ItemQuantity' => 1,
                 'ProductName' => 'sample string 1',
                 'ProductCode' => 'sample string 2',
+                'ProductDescription' => 'sample string 3',
                 'ItemPriceExVat' => 100,
                 'ItemPriceIncVat' => 121,
                 'RowDiscountExVat' => 0,
                 'RowDiscountIncVat' => 0,
                 'Vatperc' => 21
             ], [
-                'Sequence' => 1,
+                'Sequence' => 2,
                 'ItemQuantity' => 2,
                 'ProductName' => 'sample string 1',
                 'ProductCode' => 'sample string 2',
+                'ProductDescription' => 'sample string 3',
                 'ItemPriceExVat' => 100,
                 'ItemPriceIncVat' => 121,
                 'RowDiscountExVat' => 0,
@@ -173,10 +169,54 @@ Update order
         ],
     ]);
 
-
 Delete order
 
 .. code-block:: php
     
     $id = 42;
     $client->order->delete($id);
+
+Get order rows
+
+.. code-block:: php
+    
+    $id = 18618326;
+    $orderRows = $client->order->rows($id);
+
+Add order row
+
+.. code-block:: php
+    
+    $orderId = 42;
+    $client->order->addRow($orderId, [
+        'Sequence' => 3,
+        'ItemQuantity' => 3,
+        'ProductName' => 'sample string 1',
+        'ProductCode' => 'sample string 2',
+        'ProductDescription' => 'sample string 3',
+        'ItemPriceExVat' => 100,
+        'ItemPriceIncVat' => 121,
+        'RowDiscountExVat' => 0,
+        'RowDiscountIncVat' => 0,
+        'Vatperc' => 21
+    ]);
+
+Update order row
+
+.. code-block:: php
+    
+    $id = 42;
+    $orderId = 42;
+    $client->order->updateRow($orderId, [
+        'Id' => $id,
+        'Sequence' => 3,
+        'ItemQuantity' => 3,
+        'ProductName' => 'sample string 1',
+        'ProductCode' => 'sample string 2',
+        'ProductDescription' => 'sample string 3',
+        'ItemPriceExVat' => 100,
+        'ItemPriceIncVat' => 121,
+        'RowDiscountExVat' => 0,
+        'RowDiscountIncVat' => 0,
+        'Vatperc' => 21
+    ]);

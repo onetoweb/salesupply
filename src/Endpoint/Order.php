@@ -82,4 +82,26 @@ class Order extends AbstractEndpoint
     {
         return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id, 'Rows'));
     }
+    
+    /**
+     * @param int $orderId
+     * @param array $data = []
+     *
+     * @return array|null
+     */
+    public function addRow(int $orderId, array $data = []): ?array
+    {
+        return $this->request(parent::METHOD_POST, $this->getUrl(self::getResource(), $orderId, 'Rows'), $data);
+    }
+    
+    /**
+     * @param int $orderId
+     * @param array $data = []
+     *
+     * @return array|null
+     */
+    public function updateRow(int $orderId, array $data = []): ?array
+    {
+        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $orderId, 'Rows'), $data);
+    }
 }

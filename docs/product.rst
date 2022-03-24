@@ -37,12 +37,13 @@ Create product
 
 .. code-block:: php
     
+    $shopGroupId = 42;
     $product = $client->product->create([
         'SyncProductGroupsOnSave' => true,
         'SyncPropertiesOnSave' => true,
         'OrderComment' => 'sample string 3',
         'SyncEnabled' => true,
-        'ShopGroupId' => 42,
+        'ShopGroupId' => $shopGroupId,
         'Note' => 'sample string 6',
         'RefCode' => 'sample string 7',
         'KeepStock' => true,
@@ -69,13 +70,15 @@ Update product
 
 .. code-block:: php
     
+    $id = 42;
+    $shopGroupId = 42;
     $client->product->update([
-        'Id' => 42,
+        'Id' => $id,
         'SyncProductGroupsOnSave' => true,
         'SyncPropertiesOnSave' => true,
         'OrderComment' => 'sample string 3',
         'SyncEnabled' => true,
-        'ShopGroupId' => 42,
+        'ShopGroupId' => $shopGroupId,
         'Note' => 'sample string 6',
         'RefCode' => 'sample string 7',
         'KeepStock' => true,
