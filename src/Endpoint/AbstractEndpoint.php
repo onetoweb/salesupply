@@ -51,7 +51,6 @@ abstract class AbstractEndpoint implements EndpointInterface
      * @param string $url
      * @param array $data = []
      * @param array $query = []
-     * @param string $endpointPrefix = null
      *
      * @return array|null
      */

@@ -34,7 +34,7 @@ class Order extends AbstractEndpoint
     
     /**
      * @param int $shopId
-     * @param array $query = []
+     * @param array $data = []
      *
      * @return array|null
      */
