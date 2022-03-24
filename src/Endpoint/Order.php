@@ -62,4 +62,14 @@ class Order extends AbstractEndpoint
     {
         return $this->request(parent::METHOD_DELETE, $this->getUrl(self::getResource(), $id));
     }
+    
+    /**
+     * @param int $id
+     *
+     * @return array|null
+     */
+    public function rows(int $id): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id, 'Rows'));
+    }
 }

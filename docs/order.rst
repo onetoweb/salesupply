@@ -28,6 +28,14 @@ Get order
     $id = 42;
     $orders = $client->order->get($id);
 
+
+Get order rows
+
+.. code-block:: php
+    
+    $id = 18618326;
+    $orderRows = $client->order->rows($id);
+
 Create order
 
 .. code-block:: php
@@ -93,6 +101,8 @@ Create order
             'Phone' => 'sample string 8',
         ],
     ]);
+
+
 
 Delete order
 
