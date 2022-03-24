@@ -6,21 +6,30 @@
 CarrierAccount endpoint
 =======================
 
+.. contents::
+    :local:
+
+
 Get all carrier accounts
+````````````````````````
 
 .. code-block:: php
     
     $shopOwnerId = 42;
     $carrierAccounts = $client->carrierAccount->listAll($shopOwnerId);
 
+
 Get carrier accounts by shop
+````````````````````````````
 
 .. code-block:: php
     
     $shopId = 42;
     $carrierAccounts = $client->carrierAccount->listShop($shopId);
 
+
 Create carrier account
+``````````````````````
 
 .. code-block:: php
     
@@ -46,7 +55,9 @@ Create carrier account
         'Enabled' => true
     ]);
 
+
 Update carrier account
+``````````````````````
 
 .. code-block:: php
     
@@ -73,7 +84,9 @@ Update carrier account
         'Enabled' => true
     ]);
 
+
 Delete carrier account
+``````````````````````
 
 .. code-block:: php
     

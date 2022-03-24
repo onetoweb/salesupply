@@ -6,7 +6,12 @@
 Country endpoint
 ================
 
+.. contents::
+    :local:
+
+
 Get countries
+`````````````
 
 .. code-block:: php
     

@@ -6,7 +6,12 @@
 Currency endpoint
 =================
 
+.. contents::
+    :local:
+
+
 Get currencies
+``````````````
 
 .. code-block:: php
     

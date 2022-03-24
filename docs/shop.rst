@@ -6,7 +6,12 @@
 Shop endpoint
 =============
 
+.. contents::
+    :local:
+
+
 Get shops
+`````````
 
 .. code-block:: php
     

@@ -6,13 +6,20 @@
 Activity endpoint
 =================
 
+.. contents::
+    :local:
+
+
 Get activity categories
+```````````````````````
 
 .. code-block:: php
     
     $categories = $client->activity->categories();
 
+
 Get activities
+``````````````
 
 .. code-block:: php
     
@@ -22,7 +29,9 @@ Get activities
         'pageNumber' => 1
     ]);
 
+
 Create activity
+```````````````
 
 .. code-block:: php
     
@@ -37,7 +46,9 @@ Create activity
         'Billable' => true
     ]);
 
+
 Update activity
+```````````````
 
 .. code-block:: php
     
@@ -53,7 +64,9 @@ Update activity
         'Billable' => true
     ]);
 
+
 Delete activity
+```````````````
 
 .. code-block:: php
     

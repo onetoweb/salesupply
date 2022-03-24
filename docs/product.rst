@@ -6,7 +6,12 @@
 Product endpoint
 ================
 
+.. contents::
+    :local:
+
+
 Get products
+````````````
 
 .. code-block:: php
     
@@ -19,21 +24,27 @@ Get products
         'pageNumber' => 1,
     ]);
 
+
 Get product by id
+`````````````````
 
 .. code-block:: php
     
     $id = 42;
     $product = $client->product->get($id);
 
+
 Get product stock per location
+``````````````````````````````
 
 .. code-block:: php
     
     $id = 42;
     $stockPerLocation = $client->product->stockPerLocation($id);
 
+
 Create product
+``````````````
 
 .. code-block:: php
     
@@ -66,7 +77,9 @@ Create product
         'Type' => 21
     ]);
 
+
 Update product
+``````````````
 
 .. code-block:: php
     
@@ -101,7 +114,9 @@ Update product
         'Type' => 21
     ]);
 
+
 Delete product
+``````````````
 
 .. code-block:: php
     

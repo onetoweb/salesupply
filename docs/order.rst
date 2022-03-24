@@ -6,10 +6,8 @@
 Order endpoint
 ==============
 
-
 .. contents::
     :local:
-
 
 
 Get orders

@@ -6,7 +6,12 @@
 Culture endpoint
 ================
 
+.. contents::
+    :local:
+
+
 Get cultures
+````````````
 
 .. code-block:: php
     

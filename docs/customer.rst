@@ -6,13 +6,20 @@
 Customer endpoint
 =================
 
+.. contents::
+    :local:
+
+
 Get customers
+`````````````
 
 .. code-block:: php
     
     $customers = $client->customer->list();
 
+
 Create customer
+```````````````
 
 .. code-block:: php
      
@@ -91,7 +98,9 @@ Create customer
         'ContactReference' => 'sample string 15'
     ]);
 
+
 Update customer
+```````````````
 
 .. code-block:: php
     
@@ -173,7 +182,9 @@ Update customer
         'ContactReference' => 'sample string 15'
     ]);
 
+
 Delete customer
+```````````````
 
 .. code-block:: php
     
