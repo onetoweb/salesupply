@@ -6,7 +6,14 @@
 Order endpoint
 ==============
 
-Get Orders
+
+.. contents::
+    :local:
+
+
+
+Get orders
+``````````
 
 .. code-block:: php
     
@@ -21,14 +28,18 @@ Get Orders
         'pageNumber' => 1
     ]);
 
+
 Get order
+`````````
 
 .. code-block:: php
     
     $id = 42;
     $orders = $client->order->get($id);
 
+
 Create order
+````````````
 
 .. code-block:: php
     
@@ -97,7 +108,9 @@ Create order
         ],
     ]);
 
+
 Update order
+````````````
 
 .. code-block:: php
     
@@ -169,21 +182,27 @@ Update order
         ],
     ]);
 
+
 Delete order
+````````````
 
 .. code-block:: php
     
     $id = 42;
     $client->order->delete($id);
 
+
 Get order rows
+``````````````
 
 .. code-block:: php
     
     $id = 18618326;
     $orderRows = $client->order->rows($id);
 
+
 Add order row
+`````````````
 
 .. code-block:: php
     
@@ -201,7 +220,9 @@ Add order row
         'Vatperc' => 21
     ]);
 
+
 Update order row
+````````````````
 
 .. code-block:: php
     
