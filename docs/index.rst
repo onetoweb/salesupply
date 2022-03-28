@@ -29,6 +29,7 @@ Usage Endpoints
 * `Culture <culture.rst>`_
 * `Currency <currency.rst>`_
 * `Customer <customer.rst>`_
+* `ExchangeRate <exchangerate.rst>`_
 * `Order <order.rst>`_
 * `Product <product.rst>`_
 * `ShopOwner <shopowner.rst>`_
