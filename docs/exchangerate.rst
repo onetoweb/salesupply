@@ -1,10 +1,10 @@
-.. title:: Exchange rate endpoint
+.. title:: ExchangeRate endpoint
 
 `Back to index <index.rst>`_
 
-======================
-Exchange rate endpoint
-======================
+=====================
+ExchangeRate endpoint
+=====================
 
 .. contents::
     :local:

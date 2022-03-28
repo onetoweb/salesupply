@@ -82,6 +82,7 @@ class Client
         $this->customer = new Endpoint\Customer($this);
         $this->exchangeRate = new Endpoint\ExchangeRate($this);
         $this->order = new Endpoint\Order($this);
+        $this->orderStatus = new Endpoint\OrderStatus($this);
         $this->product = new Endpoint\Product($this);
         $this->shop = new Endpoint\Shop($this);
         $this->shopOwner = new Endpoint\ShopOwner($this);

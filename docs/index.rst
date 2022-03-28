@@ -31,6 +31,7 @@ Usage Endpoints
 * `Customer <customer.rst>`_
 * `ExchangeRate <exchangerate.rst>`_
 * `Order <order.rst>`_
+* `OrderStatus <orderstatus.rst>`_
 * `Product <product.rst>`_
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_

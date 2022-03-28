@@ -39,8 +39,7 @@ Create carrier account
             [
                 'Key' => 'sample string 1',
                 'Value' => 'sample string 2'
-            ],
-            [
+            ], [
                 'Key' => 'sample string 1',
                 'Value' => 'sample string 2'
             ]
@@ -67,8 +66,7 @@ Update carrier account
             [
                 'Key' => 'sample string 1',
                 'Value' => 'sample string 2'
-            ],
-            [
+            ], [
                 'Key' => 'sample string 1',
                 'Value' => 'sample string 2'
             ]
