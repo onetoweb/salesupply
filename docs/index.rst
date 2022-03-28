@@ -37,3 +37,4 @@ Usage Endpoints
 * `Product <product.rst>`_
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_
+* `System <system.rst>`_

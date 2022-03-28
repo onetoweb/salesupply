@@ -52,9 +52,9 @@ abstract class AbstractEndpoint implements EndpointInterface
      * @param array $data = []
      * @param array $query = []
      *
-     * @return array|null
+     * @return mixed
      */
-    public function request(string $method, $url = null, array $data = [], array $query = []): ?array
+    public function request(string $method, $url = null, array $data = [], array $query = [])
     {
         // build options
         $options = [

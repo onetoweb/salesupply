@@ -88,5 +88,6 @@ class Client
         $this->product = new Endpoint\Product($this);
         $this->shop = new Endpoint\Shop($this);
         $this->shopOwner = new Endpoint\ShopOwner($this);
+        $this->system = new Endpoint\System($this);
     }
 }
