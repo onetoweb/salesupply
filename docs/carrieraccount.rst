@@ -60,7 +60,9 @@ Update carrier account
 
 .. code-block:: php
     
+    $id = 42;
     $carrierAccount = $client->carrierAccount->update([
+        'Id' => $id,
         'ShopOwnerId' => 1,
         'Parameters' => [
             [
@@ -76,7 +78,6 @@ Update carrier account
         'DefaultGoodsDescription' => 'sample string 2',
         'CreateTimestamp' => '2022-03-23T15:07:03.1081395+01:00',
         'ChangeTimestamp' => '2022-03-23T15:07:03.1081395+01:00',
-        'Id' => 4,
         'AppModuleDefinitionId' => 5,
         'Name' => 'sample string 6',
         'Enabled' => true
