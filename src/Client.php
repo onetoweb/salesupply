@@ -86,6 +86,7 @@ class Client
         $this->parcel = new Endpoint\Parcel($this);
         $this->payment = new Endpoint\Payment($this);
         $this->product = new Endpoint\Product($this);
+        $this->report = new Endpoint\Report($this);
         $this->shop = new Endpoint\Shop($this);
         $this->shopOwner = new Endpoint\ShopOwner($this);
         $this->system = new Endpoint\System($this);

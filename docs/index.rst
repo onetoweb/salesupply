@@ -35,6 +35,7 @@ Usage Endpoints
 * `Parcel <parcel.rst>`_
 * `Payment <payment.rst>`_
 * `Product <product.rst>`_
+* `Report <report.rst>`_
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_
 * `System <system.rst>`_
