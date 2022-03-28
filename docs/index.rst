@@ -38,3 +38,4 @@ Usage Endpoints
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_
 * `System <system.rst>`_
+* `VatTariff <vattariff.rst>`_

@@ -89,5 +89,6 @@ class Client
         $this->shop = new Endpoint\Shop($this);
         $this->shopOwner = new Endpoint\ShopOwner($this);
         $this->system = new Endpoint\System($this);
+        $this->vatTariff = new Endpoint\VatTariff($this);
     }
 }
