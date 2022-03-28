@@ -43,6 +43,26 @@ class Order extends AbstractEndpoint
     }
     
     /**
+     * @param string $code
+     *
+     * @return array|null
+     */
+    public function getByCode(int $shopId, string $code)
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl('Shops', $shopId, self::getResource(), $code));
+    }
+    
+    /**
+     * @param string $externalOrderKey
+     *
+     * @return array|null
+     */
+    public function getExternalOrderKey(int $shopId, string $externalOrderKey)
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl('Shops', $shopId, 'OrdersByExternalOrderKey', $externalOrderKey));
+    }
+    
+    /**
      * @param int $shopId
      * @param array $data = []
      *

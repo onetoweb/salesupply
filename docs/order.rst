@@ -36,6 +36,26 @@ Get order
     $orders = $client->order->get($id);
 
 
+Get order by code
+`````````````````
+
+.. code-block:: php
+    
+    $shopId = 42;
+    $orderCode = 'order_code';
+    $order = $client->order->getByCode($shopId, $orderCode);
+
+
+Get order by external order key
+```````````````````````````````
+
+.. code-block:: php
+    
+    $shopId = 42;
+    $externalOrderKey = 'external_order_key';
+    $order = $client->order->getExternalOrderKey($shopId, $externalOrderKey);
+
+
 Create order
 ````````````
 
