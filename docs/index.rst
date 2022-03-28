@@ -33,6 +33,7 @@ Usage Endpoints
 * `Order <order.rst>`_
 * `OrderStatus <orderstatus.rst>`_
 * `Parcel <parcel.rst>`_
+* `Payment <payment.rst>`_
 * `Product <product.rst>`_
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_

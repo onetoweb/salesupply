@@ -84,6 +84,7 @@ class Client
         $this->order = new Endpoint\Order($this);
         $this->orderStatus = new Endpoint\OrderStatus($this);
         $this->parcel = new Endpoint\Parcel($this);
+        $this->payment = new Endpoint\Payment($this);
         $this->product = new Endpoint\Product($this);
         $this->shop = new Endpoint\Shop($this);
         $this->shopOwner = new Endpoint\ShopOwner($this);
