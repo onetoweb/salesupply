@@ -83,6 +83,7 @@ class Client
         $this->email = new Endpoint\Email($this);
         $this->employee = new Endpoint\Employee($this);
         $this->exchangeRate = new Endpoint\ExchangeRate($this);
+        $this->file = new Endpoint\File($this);
         $this->order = new Endpoint\Order($this);
         $this->orderStatus = new Endpoint\OrderStatus($this);
         $this->parcel = new Endpoint\Parcel($this);

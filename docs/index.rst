@@ -32,6 +32,7 @@ Usage Endpoints
 * `Email <email.rst>`_
 * `Employee <employee.rst>`_
 * `ExchangeRate <exchangerate.rst>`_
+* `File <file.rst>`_
 * `Order <order.rst>`_
 * `OrderStatus <orderstatus.rst>`_
 * `Parcel <parcel.rst>`_
