@@ -80,6 +80,8 @@ class Client
         $this->culture = new Endpoint\Culture($this);
         $this->currency = new Endpoint\Currency($this);
         $this->customer = new Endpoint\Customer($this);
+        $this->email = new Endpoint\Email($this);
+        $this->employee = new Endpoint\Employee($this);
         $this->exchangeRate = new Endpoint\ExchangeRate($this);
         $this->order = new Endpoint\Order($this);
         $this->orderStatus = new Endpoint\OrderStatus($this);

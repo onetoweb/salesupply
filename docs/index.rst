@@ -30,6 +30,7 @@ Usage Endpoints
 * `Currency <currency.rst>`_
 * `Customer <customer.rst>`_
 * `Email <email.rst>`_
+* `Employee <employee.rst>`_
 * `ExchangeRate <exchangerate.rst>`_
 * `Order <order.rst>`_
 * `OrderStatus <orderstatus.rst>`_
