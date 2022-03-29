@@ -215,7 +215,7 @@ Get order rows
 
 .. code-block:: php
     
-    $id = 18618326;
+    $id = 42;
     $orderRows = $client->order->rows($id);
 
 
