@@ -63,22 +63,76 @@ class Order extends AbstractEndpoint
     }
     
     /**
-     * @param int $shopId
-     * @param array $data = []
+     * @param int $id
      *
      * @return array|null
      */
-    public function create(int $shopId, array $data = []): ?array
+    public function parameters(int $id)
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id, 'Parameters'));
+    }
+    
+    /**
+     * @param int $id
+     * @param string $key
+     *
+     * @return array|null
+     */
+    public function parameter(int $id, string $key)
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id, 'Parameters', $key));
+    }
+    
+    /**
+     * @param int $id
+     * @param array $data
+     *
+     * @return array|null
+     */
+    public function addParameter(int $id, array $data)
+    {
+        return $this->request(parent::METHOD_POST, $this->getUrl(self::getResource(), $id, 'Parameters'), $data);
+    }
+    
+    /**
+     * @param int $id
+     * @param array $data
+     *
+     * @return array|null
+     */
+    public function updateParameter(int $id, array $data)
+    {
+        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $id, 'Parameters'), $data);
+    }
+    
+    /**
+     * @param int $id
+     * @param string $key
+     *
+     * @return array|null
+     */
+    public function removeParameter(int $id, string $key)
+    {
+        return $this->request(parent::METHOD_DELETE, $this->getUrl(self::getResource(), $id, 'Parameters', $key));
+    }
+    
+    /**
+     * @param int $shopId
+     * @param array $data
+     *
+     * @return array|null
+     */
+    public function create(int $shopId, array $data): ?array
     {
         return $this->request(parent::METHOD_POST, $this->getUrl("Shops/$shopId", self::getResource()), $data);
     }
     
     /**
-     * @param array $data = []
+     * @param array $data
      *
      * @return array|null
      */
-    public function update(array $data = []): ?array
+    public function update(array $data): ?array
     {
         return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource()), $data);
     }
@@ -105,22 +159,22 @@ class Order extends AbstractEndpoint
     
     /**
      * @param int $orderId
-     * @param array $data = []
+     * @param array $data
      *
      * @return array|null
      */
-    public function addRow(int $orderId, array $data = []): ?array
+    public function addRow(int $orderId, array $data): ?array
     {
         return $this->request(parent::METHOD_POST, $this->getUrl(self::getResource(), $orderId, 'Rows'), $data);
     }
     
     /**
      * @param int $orderId
-     * @param array $data = []
+     * @param array $data
      *
      * @return array|null
      */
-    public function updateRow(int $orderId, array $data = []): ?array
+    public function updateRow(int $orderId, array $data): ?array
     {
         return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $orderId, 'Rows'), $data);
     }

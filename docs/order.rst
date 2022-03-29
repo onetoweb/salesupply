@@ -56,6 +56,61 @@ Get order by external order key
     $order = $client->order->getExternalOrderKey($shopId, $externalOrderKey);
 
 
+Get order parameters
+````````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $parameters = $client->order->parameters($id);
+
+
+Get order parameter
+```````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $key = 'parameter_key';
+    $parameter = $client->order->parameter($id, $key);
+
+
+Add order parameter
+```````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $client->order->addParameter($id, [
+        'Key' => 'sample string 1',
+        'Value' => 'sample string 2',
+        'DataType' => 0
+    ]);
+
+
+Update order parameter
+``````````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $client->order->updateParameter($id, [
+        'Key' => 'sample string 1',
+        'Value' => 'sample string 2',
+        'DataType' => 0
+    ]);
+
+
+Remove order parameter
+``````````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $key = 'parameter_key';
+    $client->order->removeParameter($id, $key);
+
+
 Create order
 ````````````
 

@@ -53,21 +53,21 @@ class CarrierAccount extends AbstractEndpoint
     }
     
     /**
-     * @param array $data = []
+     * @param array $data
      * 
      * @return array|null
      */
-    public function create(array $data = []): ?array
+    public function create(array $data): ?array
     {
         return $this->request(parent::METHOD_POST, $this->getUrl(self::getResource()), $data);
     }
     
     /**
-     * @param array $data = []
+     * @param array $data
      * 
      * @return array|null
      */
-    public function update(array $data = []): ?array
+    public function update(array $data): ?array
     {
         return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource()), $data);
     }
