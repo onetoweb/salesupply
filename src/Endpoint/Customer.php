@@ -22,13 +22,54 @@ class Customer extends AbstractEndpoint
     }
     
     /**
+     * @param int $shopOwnerId
      * @param array $query = []
-     * 
+     *
      * @return array|null
      */
-    public function list(array $query = []): ?array
+    public function listOwners(int $shopOwnerId, array $query = []): ?array
     {
-        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()), [], $query);
+        return $this->request(parent::METHOD_GET, $this->getUrl('ShopOwners', $shopOwnerId, self::getResource()), $query);
+    }
+    
+    /**
+     * @param int $shopOwnerId
+     * @param string $search
+     *
+     * @return array|null
+     */
+    public function search(int $shopOwnerId, string $search): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl('ShopOwners', $shopOwnerId, self::getResource(), 'Search', $search));
+    }
+    
+    /**
+     * @param int $shopOwnerId
+     * @param string $customerCode
+     *
+     * @return array|null
+     */
+    public function getByCustomerCode(int $shopOwnerId, string $customerCode): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl('ShopOwners', $shopOwnerId, self::getResource(), 'CustomerCode', $customerCode));
+    }
+    
+    /**
+     * @return array|null
+     */
+    public function list(): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()));
+    }
+    
+    /**
+     * @param int $id
+     *
+     * @return array|null
+     */
+    public function get(int $id): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id));
     }
     
     /**
@@ -49,6 +90,17 @@ class Customer extends AbstractEndpoint
     public function update(array $data = []): ?array
     {
         return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource()), $data);
+    }
+    
+    /**
+     * @param int $id
+     * @param bool $newsLetter = true
+     *
+     * @return array|null
+     */
+    public function receiveNewsletter(int $id, bool $newsLetter = true): ?array
+    {
+        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $id, 'ReceiveNewsLetter', ($newsLetter ? 'true' : 'false')));
     }
     
     /**

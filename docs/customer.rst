@@ -10,12 +10,55 @@ Customer endpoint
     :local:
 
 
+Get customers fromw shop owner
+``````````````````````````````
+
+.. code-block:: php
+    
+    $shopOwnerId = 42;
+    $customers = $client->customer->listOwners($shopOwnerId, [
+        'fromDateChanged' => '1-1-2022',
+        'untilDateChanged' => '1-1-2023',
+        'pageSize' => 100,
+        'pageNumber' => 1,
+    ]);
+
+
+Search customer
+```````````````
+
+.. code-block:: php
+    
+    $shopOwnerId = 42;
+    $search = 'search for';
+    $customer = $client->customer->search($shopOwnerId, $search);
+
+
+Get customer by code
+````````````````````
+
+.. code-block:: php
+    
+    $shopOwnerId = 42;
+    $customerCode = '42';
+    $customer = $client->customer->getByCustomerCode($shopOwnerId, $customerCode);
+
+
 Get customers
 `````````````
 
 .. code-block:: php
     
     $customers = $client->customer->list();
+
+
+Get customer
+````````````
+
+.. code-block:: php
+    
+    $id  = 42;
+    $customer = $client->customer->get($id);
 
 
 Create customer
@@ -181,6 +224,15 @@ Update customer
         'EMail' => 'sample string 14',
         'ContactReference' => 'sample string 15'
     ]);
+
+
+Set if customer want to receive newsletter
+``````````````````````````````````````````
+
+.. code-block:: php
+    
+    $id  = 42;
+    $customer = $client->customer->receiveNewsletter($id, true);
 
 
 Delete customer
