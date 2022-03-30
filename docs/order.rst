@@ -362,3 +362,60 @@ Delete order comment
     $id = 42;
     $orderId = 42;
     $client->order->deleteComment($orderId, $id);
+
+
+Get order payments
+``````````````````
+
+.. code-block:: php
+    
+    $orderId = 42;
+    $payments = $client->order->getPayments($orderId);
+
+
+Create order payment
+````````````````````
+
+.. code-block:: php
+    
+    $orderId = 42;
+    $shopOwnerId = 42;
+    $payment = $client->order->createPayment($orderId, [
+        'ShopOwnerId' => $shopOwnerId,
+        'Amount' => 12.35,
+        'PaymentDate' => '2022-03-30T12:46:26.4600532+02:00',
+        'CurrencyId' => 1,
+        'CurrencyCode' => 'EUR',
+        'Note' => 'sample string 1',
+        'AccountNumber' => 'sample string 2',
+        'AccountName' => 'sample string 3',
+        'TransactionId' => 'sample string 4',
+        'CreationDate' => '2022-03-30T12:46:26.4600532+02:00',
+        'ImportSource' => 'sample string 5',
+        'PaymentTypeId' => 1,
+    ]);
+
+
+Update order payment
+````````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $orderId = 42;
+    $shopOwnerId = 42;
+    $payment = $client->order->createPayment($orderId, [
+        'Id' => $id,
+        'ShopOwnerId' => $shopOwnerId,
+        'Amount' => 12.35,
+        'PaymentDate' => '2022-03-30T12:46:26.4600532+02:00',
+        'CurrencyId' => 1,
+        'CurrencyCode' => 'EUR',
+        'Note' => 'sample string 1',
+        'AccountNumber' => 'sample string 2',
+        'AccountName' => 'sample string 3',
+        'TransactionId' => 'sample string 4',
+        'CreationDate' => '2022-03-30T12:46:26.4600532+02:00',
+        'ImportSource' => 'sample string 5',
+        'PaymentTypeId' => 1,
+    ]);
