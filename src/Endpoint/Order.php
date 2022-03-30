@@ -178,4 +178,47 @@ class Order extends AbstractEndpoint
     {
         return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $orderId, 'Rows'), $data);
     }
+    
+    /**
+     * @param int $orderId
+     *
+     * @return array|null
+     */
+    public function comments(int $orderId): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $orderId, 'OrderComments'));
+    }
+    
+    /**
+     * @param int $orderId
+     * @param array $data
+     *
+     * @return array|null
+     */
+    public function addComment(int $orderId, array $data): ?array
+    {
+        return $this->request(parent::METHOD_POST, $this->getUrl(self::getResource(), $orderId, 'OrderComments'), $data);
+    }
+    
+    /**
+     * @param int $orderId
+     * @param array $data
+     *
+     * @return array|null
+     */
+    public function updateComment(int $orderId, array $data): ?array
+    {
+        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $orderId, 'OrderComments'), $data);
+    }
+    
+    /**
+     * @param int $orderId
+     * @param int $id
+     *
+     * @return array|null
+     */
+    public function deleteComment(int $orderId, int $id): ?array
+    {
+        return $this->request(parent::METHOD_DELETE, $this->getUrl(self::getResource(), $orderId, 'OrderComments', $id));
+    }
 }

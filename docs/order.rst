@@ -314,3 +314,51 @@ Update order row
         'RowDiscountIncVat' => 0,
         'Vatperc' => 21
     ]);
+
+
+Get order comments
+``````````````````
+
+.. code-block:: php
+    
+    $orderId = 42;
+    $comments = $client->order->comments($orderId);
+
+
+Add order comment
+`````````````````
+
+.. code-block:: php
+    
+    $orderId = 42;
+    $client->order->addComment($orderId, [
+        'Comment' => 'sample string 1',
+        'TimeStamp' => '2022-03-30T09:06:53.9213739+02:00',
+        'CommentType' => 5
+    ]);
+
+
+Update order comment
+````````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $orderId = 42;
+    $client->order->updateComment($orderId, [
+        'Id' => $id,
+        'OrderId' => $orderId,
+        'Comment' => 'sample string 1',
+        'TimeStamp' => '2022-03-30T09:06:53.9213739+02:00',
+        'CommentType' => 5
+    ]);
+
+
+Delete order comment
+````````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $orderId = 42;
+    $client->order->deleteComment($orderId, $id);
