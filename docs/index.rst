@@ -43,3 +43,4 @@ Usage Endpoints
 * `Shop <shop.rst>`_
 * `System <system.rst>`_
 * `VatTariff <vattariff.rst>`_
+* `Warehouse <warehouse.rst>`_
