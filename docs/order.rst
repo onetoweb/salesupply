@@ -419,3 +419,112 @@ Update order payment
         'ImportSource' => 'sample string 5',
         'PaymentTypeId' => 1,
     ]);
+
+
+Get order parcels
+`````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $parcels = $client->order->getParcels($id);
+
+
+Create order parcel
+```````````````````
+
+.. code-block:: php
+    
+    $shopId = 42;
+    $orderId = 42;
+    $parcel = $client->order->createParcel($orderId, [
+        'ShopId' => $shopId,
+        'SynchronizeParameters' => true,
+        'SynchronizeShippingLabels' => true,
+        'GoodsDescription' => 'sample string 1',
+        'DeliveredDate' => '2022-03-31T09:20:50.0381859+02:00',
+        'TrackingCode' => 'sample string 2',
+        'ParcelStatus' => 1,
+        'CarrierAccountId' => 1,
+        'ShipFrom' => [
+            'CompanyName' => 'sample string 1',
+            'Address' => 'sample string 2',
+            'Address2' => 'sample string 3',
+            'StreetAddress' => 'sample string 4',
+            'StreetAddressNumber' => 'sample string 5',
+            'StreetAddressExtension' => 'sample string 6',
+            'PostalCode' => 'sample string 7',
+            'City' => 'sample string 8',
+            'CountryId' => 1,
+            'CountryCode' => 'NL',
+            'CountryName' => 'Netherlands',
+            'EMail' => 'sample string 9',
+            'Phone' => 'sample string 10',
+        ],
+        'ShipTo' => [
+            'CompanyName' => 'sample string 1',
+            'Address' => 'sample string 2',
+            'Address2' => 'sample string 3',
+            'StreetAddress' => 'sample string 4',
+            'StreetAddressNumber' => 'sample string 5',
+            'StreetAddressExtension' => 'sample string 6',
+            'PostalCode' => 'sample string 7',
+            'City' => 'sample string 8',
+            'CountryId' => 1,
+            'CountryCode' => 'NL',
+            'CountryName' => 'Netherlands',
+            'EMail' => 'sample string 9',
+            'Phone' => 'sample string 10',
+        ],
+    ]);
+
+
+Update order parcel
+```````````````````
+
+.. code-block:: php
+    
+    $id = 42;
+    $shopId = 42;
+    $orderId = 42;
+    $client->order->updateParcel($orderId, [
+        'Id' => $id,
+        'ShopId' => $shopId,
+        'SynchronizeParameters' => true,
+        'SynchronizeShippingLabels' => true,
+        'GoodsDescription' => 'sample string 1',
+        'DeliveredDate' => '2022-03-31T09:20:50.0381859+02:00',
+        'TrackingCode' => 'sample string 2',
+        'ParcelStatus' => 1,
+        'CarrierAccountId' => 1,
+        'ShipFrom' => [
+            'CompanyName' => 'sample string 1',
+            'Address' => 'sample string 2',
+            'Address2' => 'sample string 3',
+            'StreetAddress' => 'sample string 4',
+            'StreetAddressNumber' => 'sample string 5',
+            'StreetAddressExtension' => 'sample string 6',
+            'PostalCode' => 'sample string 7',
+            'City' => 'sample string 8',
+            'CountryId' => 1,
+            'CountryCode' => 'NL',
+            'CountryName' => 'Netherlands',
+            'EMail' => 'sample string 9',
+            'Phone' => 'sample string 10',
+        ],
+        'ShipTo' => [
+            'CompanyName' => 'sample string 1',
+            'Address' => 'sample string 2',
+            'Address2' => 'sample string 3',
+            'StreetAddress' => 'sample string 4',
+            'StreetAddressNumber' => 'sample string 5',
+            'StreetAddressExtension' => 'sample string 6',
+            'PostalCode' => 'sample string 7',
+            'City' => 'sample string 8',
+            'CountryId' => 1,
+            'CountryCode' => 'NL',
+            'CountryName' => 'Netherlands',
+            'EMail' => 'sample string 9',
+            'Phone' => 'sample string 10',
+        ],
+    ]);
