@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * Uom Endpoint.
+ * ExchangeRate Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class Uom extends AbstractEndpoint
+class ExchangeRate extends AbstractEndpoint
 {
-    const RESOURCE = 'Uoms';
+    const RESOURCE = 'ExchangeRates';
     
     /**
      * @return string

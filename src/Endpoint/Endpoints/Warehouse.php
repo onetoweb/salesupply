@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * Product Endpoint.
+ * Warehouse Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class Product extends AbstractEndpoint
+class Warehouse extends AbstractEndpoint
 {
-    const RESOURCE = 'Products';
+    const RESOURCE = 'Warehouses';
     
     /**
      * @return string
@@ -22,39 +24,16 @@ class Product extends AbstractEndpoint
     }
     
     /**
-     * @param int $shopGroupId
-     * @param array $query = []
-     * 
      * @return array|null
      */
-    public function list(int $shopGroupId, array $query = []): ?array
+    public function list(): ?array
     {
-        return $this->request(parent::METHOD_GET, $this->getUrl('ShopGroup', $shopGroupId, self::getResource()), [], $query);
-    }
-    
-    /**
-     * @param int $id
-     *
-     * @return array|null
-     */
-    public function get(int $id): ?array
-    {
-        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id));
-    }
-    
-    /**
-     * @param int $id
-     *
-     * @return array|null
-     */
-    public function stockPerLocation(int $id): ?array
-    {
-        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id, 'StockPerLocation'));
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()));
     }
     
     /**
      * @param array $data
-     *
+     * 
      * @return array|null
      */
     public function create(array $data): ?array
@@ -73,7 +52,7 @@ class Product extends AbstractEndpoint
     }
     
     /**
-     * @param array int $id
+     * @param int $id
      *
      * @return array|null
      */

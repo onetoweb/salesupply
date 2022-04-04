@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * Employee Endpoint.
+ * Uom Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class Employee extends AbstractEndpoint
+class Uom extends AbstractEndpoint
 {
-    const RESOURCE = 'Employees';
+    const RESOURCE = 'Uoms';
     
     /**
      * @return string

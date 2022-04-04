@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * Supplier Endpoint.
+ * Activity Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class Supplier extends AbstractEndpoint
+class Activity extends AbstractEndpoint
 {
-    const RESOURCE = 'Suppliers';
+    const RESOURCE = 'Activities';
     
     /**
      * @return string
@@ -24,19 +26,19 @@ class Supplier extends AbstractEndpoint
     /**
      * @return array|null
      */
-    public function list(): ?array
+    public function categories(): ?array
     {
-        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()));
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), 'categories'));
     }
     
     /**
-     * @param int $id
+     * @param array $query = []
      * 
      * @return array|null
      */
-    public function get(int $id): ?array
+    public function list(array $query = []): ?array
     {
-        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id));
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()), [], $query);
     }
     
     /**
@@ -50,18 +52,19 @@ class Supplier extends AbstractEndpoint
     }
     
     /**
+     * @param int $id
      * @param array $data
-     *
+     * 
      * @return array|null
      */
-    public function update(array $data): ?array
+    public function update(int $id, array $data): ?array
     {
-        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource()), $data);
+        return $this->request(parent::METHOD_PUT, $this->getUrl(self::getResource(), $id), $data);
     }
     
     /**
      * @param int $id
-     *
+     * 
      * @return array|null
      */
     public function delete(int $id): ?array

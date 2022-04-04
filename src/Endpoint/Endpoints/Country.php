@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * Shop Endpoint.
+ * Country Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class Shop extends AbstractEndpoint
+class Country extends AbstractEndpoint
 {
-    const RESOURCE = 'Shops';
+    const RESOURCE = 'Countries';
     
     /**
      * @return string

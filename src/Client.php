@@ -2,6 +2,8 @@
 
 namespace Onetoweb\Salesupply;
 
+use Onetoweb\Salesupply\Endpoint\EndpointInterface;
+
 /**
  * Salesupply Api Client
  * 
@@ -70,34 +72,34 @@ class Client
     }
     
     /**
+     * @param string $key
+     * @param EndpointInterface $endpoint
+     * 
+     * @return void
+     */
+    public function addEndpoint(string $key, string $endpoint): void
+    {
+        $this->{$key} = new $endpoint($this);
+    }
+    
+    /**
      * @return void
      */
     private function initializeEndpoints(): void
     {
-        $this->activity = new Endpoint\Activity($this);
-        $this->carrierAccount = new Endpoint\CarrierAccount($this);
-        $this->country = new Endpoint\Country($this);
-        $this->culture = new Endpoint\Culture($this);
-        $this->currency = new Endpoint\Currency($this);
-        $this->customer = new Endpoint\Customer($this);
-        $this->email = new Endpoint\Email($this);
-        $this->employee = new Endpoint\Employee($this);
-        $this->exchangeRate = new Endpoint\ExchangeRate($this);
-        $this->file = new Endpoint\File($this);
-        $this->order = new Endpoint\Order($this);
-        $this->orderStatus = new Endpoint\OrderStatus($this);
-        $this->parcel = new Endpoint\Parcel($this);
-        $this->payment = new Endpoint\Payment($this);
-        $this->product = new Endpoint\Product($this);
-        $this->report = new Endpoint\Report($this);
-        $this->shop = new Endpoint\Shop($this);
-        $this->shopOwner = new Endpoint\ShopOwner($this);
-        $this->supplier = new Endpoint\Supplier($this);
-        $this->system = new Endpoint\System($this);
-        $this->ticket = new Endpoint\Ticket($this);
-        $this->transportCategory = new Endpoint\TransportCategory($this);
-        $this->uom = new Endpoint\Uom($this);
-        $this->vatTariff = new Endpoint\VatTariff($this);
-        $this->warehouse = new Endpoint\Warehouse($this);
+        $directory = __DIR__ . '/Endpoint/Endpoints/';
+        foreach (array_diff(scandir($directory), array('..', '.')) as $filename) {
+            
+            if (is_file($directory . $filename)) {
+                
+                $endpoint = pathinfo($filename, PATHINFO_FILENAME);
+                $class = "\\Onetoweb\\Salesupply\\Endpoint\\Endpoints\\$endpoint";
+                
+                if (class_exists($class) and in_array(EndpointInterface::class, class_implements($class))) {
+                    
+                    $this->addEndpoint(lcfirst($endpoint), $class);
+                }
+            }
+        }
     }
 }

@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * TransportCategory Endpoint.
+ * Culture Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class TransportCategory extends AbstractEndpoint
+class Culture extends AbstractEndpoint
 {
-    const RESOURCE = 'TransportCategories';
+    const RESOURCE = 'Cultures';
     
     /**
      * @return string
@@ -27,15 +29,5 @@ class TransportCategory extends AbstractEndpoint
     public function list(): ?array
     {
         return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()));
-    }
-    
-    /**
-     * @param int $id
-     *
-     * @return array|null
-     */
-    public function get(int $id): ?array
-    {
-        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id));
     }
 }

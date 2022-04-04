@@ -1,17 +1,19 @@
 <?php
 
-namespace Onetoweb\Salesupply\Endpoint;
+namespace Onetoweb\Salesupply\Endpoint\Endpoints;
+
+use Onetoweb\Salesupply\Endpoint\AbstractEndpoint;
 
 /**
- * Warehouse Endpoint.
+ * Supplier Endpoint.
  * 
  * @author Jonathan van 't Ende <jvantende@onetoweb.nl>
  * 
  * @copyright Onetoweb B.V.
  */
-class Warehouse extends AbstractEndpoint
+class Supplier extends AbstractEndpoint
 {
-    const RESOURCE = 'Warehouses';
+    const RESOURCE = 'Suppliers';
     
     /**
      * @return string
@@ -27,6 +29,16 @@ class Warehouse extends AbstractEndpoint
     public function list(): ?array
     {
         return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource()));
+    }
+    
+    /**
+     * @param int $id
+     * 
+     * @return array|null
+     */
+    public function get(int $id): ?array
+    {
+        return $this->request(parent::METHOD_GET, $this->getUrl(self::getResource(), $id));
     }
     
     /**
