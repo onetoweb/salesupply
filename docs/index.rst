@@ -41,6 +41,7 @@ Usage Endpoints
 * `Report <report.rst>`_
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_
+* `Supplier <supplier.rst>`_
 * `System <system.rst>`_
 * `Ticket <ticket.rst>`_
 * `TransportCategory <transportcategory.rst>`_

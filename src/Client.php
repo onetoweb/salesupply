@@ -92,6 +92,7 @@ class Client
         $this->report = new Endpoint\Report($this);
         $this->shop = new Endpoint\Shop($this);
         $this->shopOwner = new Endpoint\ShopOwner($this);
+        $this->supplier = new Endpoint\Supplier($this);
         $this->system = new Endpoint\System($this);
         $this->ticket = new Endpoint\Ticket($this);
         $this->transportCategory = new Endpoint\TransportCategory($this);
