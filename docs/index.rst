@@ -42,6 +42,7 @@ Usage Endpoints
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_
 * `System <system.rst>`_
+* `Ticket <ticket.rst>`_
 * `TransportCategory <transportcategory.rst>`_
 * `Uom <uom.rst>`_
 * `VatTariff <vattariff.rst>`_

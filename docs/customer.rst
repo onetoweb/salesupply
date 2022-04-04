@@ -10,8 +10,8 @@ Customer endpoint
     :local:
 
 
-Get customers fromw shop owner
-``````````````````````````````
+Get customers from shop owner
+`````````````````````````````
 
 .. code-block:: php
     
