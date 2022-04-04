@@ -39,6 +39,7 @@ Usage Endpoints
 * `Payment <payment.rst>`_
 * `Product <product.rst>`_
 * `Report <report.rst>`_
+* `Shipment <shipment.rst>`_
 * `ShopOwner <shopowner.rst>`_
 * `Shop <shop.rst>`_
 * `Supplier <supplier.rst>`_
